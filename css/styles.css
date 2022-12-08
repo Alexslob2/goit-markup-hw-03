@@ -11,7 +11,6 @@
     --background-acent-color: #2E2F42;
     --background-herobutton-color: #4D5AE5;
     --primary-text-family: 'roboto', sans-serif;
-    --logo-text-family: 'raleway', sans-serif;
 }
 
 body {
@@ -56,7 +55,8 @@ ul {
 
 /* Logo */
 .logo{
-    font-family: var (--logo-text-family);
+    font-family: 'raleway';
+    color: var(--primary-text-color);
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
@@ -66,25 +66,23 @@ ul {
 }
 
 .logo-web {
-    font-family: var(--logo-text-family);
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.33;
     color: var(--logo-color);
-    letter-spacing: 0.03em;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .link-nav {
     font-family: var(--primary-text-family);
+    color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.33;
     text-decoration: none;
 }
 
-.link-nav:focus, .link-nav:hover {}
+
+.link-nav:hover {
+    color: var(--link-text-color);
+}
 
 /* Contacts */
 .link-contact {
@@ -96,7 +94,8 @@ ul {
     color: var(--secondary-text-color);
 }
 
-.link-contact:focus, .link-contact:hover {
+.link-contact:hover {
+color: var(--link-text-color);
 }
 /* Hero sectoin */
 
@@ -115,7 +114,7 @@ ul {
 
 .hero-button {
     font-family: var(--primary-text-family);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     color: var(--alternative-text-color);
@@ -126,14 +125,17 @@ ul {
     cursor: pointer;
 }
 
-.hero-button:focus, .hero-button:hover {}
+.hero-button:focus,.hero-button:hover {
+    background-color:var(--background-secondary-color) ;
+    color: var(--link-text-color);
+}
 
 .section-2 {
     background-color: var(--background-secondary-color);
 }
 
 .team-item {
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
 }
 
 .button-portfolio {
@@ -150,14 +152,17 @@ ul {
 }
 
 .sectoin-4 {
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
 }
 
 .explaine-item {
-        background-color: #FFFFFF;
+    background-color: var(--background-color);
 }
 
-.button-portfolio:focus, .button-portfolio:hover {}
+.button-portfolio:focus,.button-portfolio:hover {
+    color: var(--alternative-text-color);
+    background-color: var(--background-herobutton-color);
+}
 /* Footer */
 
 .footer-bg {
@@ -183,3 +188,12 @@ ul {
     color: var(--alternative-logo-color);
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+}
